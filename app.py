@@ -37,7 +37,7 @@ def register():
         db.session.commit()
 
     if form.validate_on_submit(): # checks if entries are valid
-        flash(f'Account created for {form.username.data}!', 'success')
+       # flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home')) # if so - send to home page
     return render_template('register.html', title='Register', form=form)
 
